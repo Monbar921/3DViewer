@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>940</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1280</width>
+    <height>940</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1280</width>
+    <height>960</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>1280</width>
+    <height>940</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Noto Sans</family>
+    <pointsize>14</pointsize>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>3DViever 1.0</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 14pt &quot;Noto Sans&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="s21::GemmaGLWidget" name="mainGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>960</width>
+      <height>720</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scrollBarScale">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>810</y>
+      <width>960</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="minimum">
+     <number>-1000</number>
+    </property>
+    <property name="maximum">
+     <number>1000</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="invertedAppearance">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditFullFileName">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>860</y>
+      <width>600</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Noto Sans</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSelectFile">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>860</y>
+      <width>110</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select</string>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scrollBarShiftX">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>590</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-100</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scrollBarShiftY">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>630</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-100</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scrollBarShiftZ">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>670</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-100</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonOpenFile">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>860</y>
+      <width>110</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open</string>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scrollBarAngleX">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>790</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-180</number>
+    </property>
+    <property name="maximum">
+     <number>180</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scrollBarAngleY">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>830</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-180</number>
+    </property>
+    <property name="maximum">
+     <number>180</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="scrollBarAngleZ">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>870</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-180</number>
+    </property>
+    <property name="maximum">
+     <number>180</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBoxProjectionType">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>70</y>
+      <width>260</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>parallel</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>central</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBoxEdgesType">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>200</y>
+      <width>120</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>solid</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>dotted</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSelectColorLine">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>200</y>
+      <width>60</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Noto Sans&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Get</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxEdgesSize">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>200</y>
+      <width>60</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>30</number>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBoxVertexType">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>330</y>
+      <width>120</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>none</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>round</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>square</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSelectColorVertex">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>330</y>
+      <width>60</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Noto Sans&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Get</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxVertexesSize">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>330</y>
+      <width>60</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>30</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSelectColorBG">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>740</y>
+      <width>60</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Noto Sans&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Get</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelProjection">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>20</y>
+      <width>260</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string>Projection</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFileVal">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>20</y>
+      <width>165</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFile">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>50</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string>File</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelVertexesVal">
+    <property name="geometry">
+     <rect>
+      <x>365</x>
+      <y>20</y>
+      <width>125</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelVertexes">
+    <property name="geometry">
+     <rect>
+      <x>265</x>
+      <y>20</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string>Vertexes</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFaces">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>20</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string>Faces</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFacesVal">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>20</y>
+      <width>125</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelEdges">
+    <property name="geometry">
+     <rect>
+      <x>755</x>
+      <y>20</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string>Edges</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelEdgesVal">
+    <property name="geometry">
+     <rect>
+      <x>855</x>
+      <y>20</y>
+      <width>125</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelEdgesParam">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>150</y>
+      <width>260</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string>Edges</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelVertexesParam">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>280</y>
+      <width>260</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string>Vertexes</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSelectColorFace">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>460</y>
+      <width>60</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Noto Sans&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Get</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBoxFacesType">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>460</y>
+      <width>190</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>none</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>solid</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="labelFacesParam">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>410</y>
+      <width>260</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string>Faces</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFacesShift">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>540</y>
+      <width>260</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Noto Sans</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string>Shift</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFacesRotate">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>740</y>
+      <width>260</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string>Rotate</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelScale">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>750</y>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 1px kSolid black ;</string>
+    </property>
+    <property name="text">
+     <string>1:1</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxShiftX">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>590</y>
+      <width>50</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="minimum">
+     <number>-100</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxShiftY">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>630</y>
+      <width>50</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="minimum">
+     <number>-100</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxShiftZ">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>670</y>
+      <width>50</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="minimum">
+     <number>-100</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxAngleX">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>790</y>
+      <width>50</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="minimum">
+     <number>-180</number>
+    </property>
+    <property name="maximum">
+     <number>180</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxAngleY">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>830</y>
+      <width>50</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="minimum">
+     <number>-180</number>
+    </property>
+    <property name="maximum">
+     <number>180</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxAngleZ">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>870</y>
+      <width>50</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="minimum">
+     <number>-180</number>
+    </property>
+    <property name="maximum">
+     <number>180</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSaveIMG">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>80</y>
+      <width>90</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Noto Sans&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Save IMG</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSaveGIF">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>120</y>
+      <width>90</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Noto Sans&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Save GIF</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonResetObj">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>860</y>
+      <width>110</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+   <zorder>comboBoxProjectionType</zorder>
+   <zorder>mainGLWidget</zorder>
+   <zorder>scrollBarScale</zorder>
+   <zorder>lineEditFullFileName</zorder>
+   <zorder>pushButtonSelectFile</zorder>
+   <zorder>scrollBarShiftX</zorder>
+   <zorder>scrollBarShiftY</zorder>
+   <zorder>scrollBarShiftZ</zorder>
+   <zorder>pushButtonOpenFile</zorder>
+   <zorder>scrollBarAngleX</zorder>
+   <zorder>scrollBarAngleY</zorder>
+   <zorder>scrollBarAngleZ</zorder>
+   <zorder>comboBoxEdgesType</zorder>
+   <zorder>pushButtonSelectColorLine</zorder>
+   <zorder>spinBoxEdgesSize</zorder>
+   <zorder>comboBoxVertexType</zorder>
+   <zorder>pushButtonSelectColorVertex</zorder>
+   <zorder>spinBoxVertexesSize</zorder>
+   <zorder>pushButtonSelectColorBG</zorder>
+   <zorder>labelProjection</zorder>
+   <zorder>labelFileVal</zorder>
+   <zorder>labelFile</zorder>
+   <zorder>labelVertexesVal</zorder>
+   <zorder>labelVertexes</zorder>
+   <zorder>labelFaces</zorder>
+   <zorder>labelFacesVal</zorder>
+   <zorder>labelEdges</zorder>
+   <zorder>labelEdgesVal</zorder>
+   <zorder>labelEdgesParam</zorder>
+   <zorder>labelVertexesParam</zorder>
+   <zorder>pushButtonSelectColorFace</zorder>
+   <zorder>comboBoxFacesType</zorder>
+   <zorder>labelFacesParam</zorder>
+   <zorder>labelFacesShift</zorder>
+   <zorder>labelFacesRotate</zorder>
+   <zorder>labelScale</zorder>
+   <zorder>spinBoxShiftX</zorder>
+   <zorder>spinBoxShiftY</zorder>
+   <zorder>spinBoxShiftZ</zorder>
+   <zorder>spinBoxAngleX</zorder>
+   <zorder>spinBoxAngleY</zorder>
+   <zorder>spinBoxAngleZ</zorder>
+   <zorder>pushButtonSaveIMG</zorder>
+   <zorder>pushButtonSaveGIF</zorder>
+   <zorder>pushButtonResetObj</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="font">
+    <font>
+     <family>Noto Sans</family>
+     <pointsize>14</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>s21::GemmaGLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>gemmaglwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

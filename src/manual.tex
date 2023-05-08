@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{indentfirst}
+\geometry{verbose,a4paper,tmargin=2cm,bmargin=2cm,lmargin=2.5cm,rmargin=1.5cm}
+\title{Quick guide to the 3DViewer v2.0}
+
+\author{Team: Gemma Emery, Demogorg Belladonna}
+
+\date{April 2023}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+
+% \tableofcontents
+% \pagebreak
+
+
+\section{Introduction}
+The 3DViewer v1.0 is a program to view 3D wireframe models. This program is implemented by the C++ programming language using structured programming. The GUI is implemented using the Qt library. The models themselves can be loaded from .obj files and be viewable on the screen with the ability to rotate, scale and translate.
+
+A wireframe model is a model of an object in 3D graphics, which is a set of vertices and edges that defines the shape of the displayed polyhedral object in three-dimensional space.
+
+.Obj file is a geometry definition file format first developed by Wavefront Technologies. The file format is open and accepted by many 3D graphics application vendors.
+
+% \pagebreak
+
+\section{Features}
+
+The following features are supported:
+  \begin{itemize}
+    \item The program is developed in C language of C11 standard using gcc compiler by using additional QT libraries and modules
+    \item The program is developed according to the principles of structured programming
+    \item Prepared full coverage of modules related to model loading and affine transformations with unit-tests
+    \item Only one model is on the screen at a time
+    \item The program provides the ability to:
+    \begin{itemize}
+      \item Load a wireframe model from an obj file (vertices and surfaces list support only).
+      \item Translate the model by a given distance in relation to the X, Y, Z axes.
+      \item Rotate the model by a given angle relative to its X, Y, Z axes.
+      \item Scale the model by a given value.
+    \end{itemize}
+  \item GUI implementation, based QT library with API for C11
+  \item The graphical user interface contains:
+  \begin{itemize}
+      \item A button to select the model file and a field to output its name.
+      \item A visualisation area for the wireframe model.
+      \item Button/buttons and input fields for translating the model.
+      \item Button/buttons and input fields for rotating the model.
+      \item Button/buttons and input fields for scaling the model.
+      \item Information about the uploaded model - file name, number of vertices and edges.
+      \end{itemize}
+  \item The program correctly processes and allows user to view models with details up to 100, 1000, 10,000, 100,000, 1,000,000  vertices without freezing (a freeze is an interface inactivity of more than 0.5 seconds)
+  \end{itemize}
+
+\pagebreak
+\section{Bonus. Settings}
+The 3DViewer v1.0 provides a special settings features:
+  \begin{itemize}
+    \item The program allows customizing the type of projection (parallel and central)
+    \item The program allows setting up the type (solid, dashed), color and thickness of the edges, display method (none, circle, square), color and size of the vertices
+    \item The program allows choosing the background color
+    \item Settings are saved between program restarts
+  \end{itemize}
+
+\section{Bonus. Record}
+The 3DViewer v1.0 provides a special record features:
+  \begin{itemize}
+    \item The program allows saving the captured (rendered) images as bmp and jpeg files.
+    \item The program allows recording small screencasts by a special button - the current custom affine transformation of the loaded object into gif-animation (640x480, 10fps, 5s)
+  \end{itemize}
+  
+\end{document}
+
